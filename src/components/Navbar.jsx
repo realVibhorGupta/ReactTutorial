@@ -50,7 +50,10 @@ import PropTypes from "prop-types";
 
 }
 // Add Types For Properties
-Navbar.propTypes =  {title : PropTypes.string}
+Navbar.propTypes =  {
+  title : PropTypes.string.isRequired
+
+}
 
 
 Navbar.defaultProps = {
