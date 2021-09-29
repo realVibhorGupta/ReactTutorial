@@ -7,9 +7,8 @@ function App() {
  
   return (
     <>
-    <Navbar/>
    
-
+    <Navbar title = "Ekart"/>
     
     </>
   );
