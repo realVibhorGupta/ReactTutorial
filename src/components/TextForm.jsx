@@ -29,6 +29,17 @@ const handleOnChange = (event) =>{
   setText(event.target.value);
 }
 
+const handleExtraSpaces = () => {
+ console.log("handleExtraSpaces");
+ let resultText = text.split(/[]+/);
+setText(resultText.join(" "));
+} 
+const handleCopy = (event) => {
+  console.log("handleCopy button pressed");
+  let text = document.getElementsById("myBox");
+  text.select()
+  navigator.clipboard.write(text.value);
+}
 const [text , setText] = useState('Enter Text Here');
 
   return (
@@ -42,6 +53,8 @@ const [text , setText] = useState('Enter Text Here');
     </div>
     <button className="btn btn-primary" onClick={handleUpperCase} > Convert to Uppercase </button>
     <button className="btn btn-primary mx-3" onClick={handleLowerCase} > Convert to Lowercase </button>
+      <button className="btn btn-primary mx-3 my-3" onClick={handleCopy} >Copy Text</button>
+       <button className="btn btn-primary mx-3 my-3" onClick={handleExtraSpaces} >Remove Extra Spaces</button>
      <button className="btn btn-primary mx-3 my-3" onClick={handleClearText} >Clear Text</button>
       <div className="container my-3">
               <h1>Your Text Summary</h1>

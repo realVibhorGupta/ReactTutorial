@@ -2,6 +2,9 @@ import React from 'react';
 import './App.css';
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
+import About from "./components/About";
+
+     <TextForm heading = "Magic Text"/>
 
 
 function App() {
@@ -11,7 +14,7 @@ function App() {
    
     <Navbar title = "Magico"/>
     <div className = "container">
-     <TextForm heading = "Magic Text"/>
+    <TextForm />
     </div>
     </>
   );
